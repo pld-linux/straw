@@ -2,22 +2,22 @@
 Summary:	News aggregator
 Summary(pl):	Narzêdzie zbieraj±ce wiadomo¶ci
 Name:		straw
-Version:	0.17
+Version:	0.19
 Release:	0.1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://savannah.nongnu.org/download/%{name}/%{name}.pkg/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	5dc804b65d420042f158bfc13307f4d1
+# Source0-md5:	93af66a84e97034d4981c0452995ccf7
 Patch0:		%{name}-python.patch
 Patch1:		%{name}-sax_handler.patch
 URL:		http://www.nongnu.org/straw/
 BuildRequires:	libgnomeui-devel >= 2.0.5
-Requires:	python-gnome-ui
+Requires:	python-adns
+Requires:	python-bsddb
 Requires:	python-gnome-gtkhtml
+Requires:	python-gnome-ui
 Requires:	python-gnome-vfs
 Requires:	python-mx-DateTime
-Requires:	python-bsddb
-BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -52,7 +52,8 @@ skorzystaæ z centralnego serwisu takiego jak Syndic8.com.
 %patch1 -p1
 
 %build
-%{__make} PYTHON=python
+%{__make} \
+	PYTHON=python
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -67,6 +68,8 @@ install src/lib/*.py $RPM_BUILD_ROOT%{py_sitedir}/%{name}
 
 %py_comp $RPM_BUILD_ROOT%{py_sitedir}/%{name}
 %py_ocomp $RPM_BUILD_ROOT%{py_sitedir}/%{name}
+rm -f $RPM_BUILD_ROOT%{py_sitedir}/%{name}/*.py
+
 %find_lang %{name}
 
 %clean
@@ -76,8 +79,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README NEWS TODO
 %attr(755,root,root) %{_bindir}/*
-%dir %{py_sitedir}/%{name}
-%{py_sitedir}/%{name}/*.py[co]
+%{py_sitedir}/%{name}
 %{_datadir}/%{name}
 %{_desktopdir}/*
 %{_pixmapsdir}/*
