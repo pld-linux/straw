@@ -2,7 +2,7 @@ Summary:	News aggregator
 Summary(pl):	Narzêdzie zbieraj±ce wiadomo¶ci
 Name:		straw
 Version:	0.23
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://savannah.nongnu.org/download/%{name}/%{name}-%{version}.tar.bz2
@@ -17,7 +17,7 @@ Requires:	python-gnome-gconf
 Requires:	python-gnome-gtkhtml
 Requires:	python-gnome-ui
 Requires:	python-gnome-vfs
-Requires:	python-modules >= 2.3
+%pyrequires_eq	python-modules
 Requires:	python-pygtk-glade
 Requires:	python-pyorbit
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
