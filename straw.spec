@@ -2,12 +2,12 @@
 Summary:	News aggregator
 Summary(pl):	Narzêdzie zbieraj±ce wiadomo¶ci
 Name:		straw
-Version:	0.22.1
+Version:	0.23
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://savannah.nongnu.org/download/%{name}/%{name}-%{version}.tar.bz2
-# Source0-md5:	977930b03ba049513f5d1bd981bc3b2f
+# Source0-md5:	8dbdb3bbb7a20554a069bca11712d8c3
 URL:		http://www.nongnu.org/straw/
 BuildRequires:	libglade2-devel >= 2.0.1
 BuildRequires:	libgnomeui-devel >= 2.4.0
@@ -62,6 +62,7 @@ rm -rf $RPM_BUILD_ROOT
 	--sysconfdir=%{_sysconfdir} \
 	--install-purelib=%{py_sitedir} \
 	--optimize=2 \
+	--with-gconf-schema-file-dir=%{_sysconfdir}/gconf/schemas \
 	--disable-modules-check \
 	--disable-schemas-install
 
