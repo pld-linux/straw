@@ -2,12 +2,12 @@
 Summary:	News aggregator
 Summary(pl):	Narzêdzie zbieraj±ce wiadomo¶ci
 Name:		straw
-Version:	0.19
-Release:	0.3
+Version:	0.19.1
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://savannah.nongnu.org/download/%{name}/%{name}.pkg/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	93af66a84e97034d4981c0452995ccf7
+# Source0-md5:	0f616b6c2d684f8508f896fd9f9c7e1a
 Patch0:		%{name}-python.patch
 Patch1:		%{name}-sax_handler.patch
 URL:		http://www.nongnu.org/straw/
