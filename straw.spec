@@ -2,8 +2,8 @@
 Summary:	News aggregator
 Summary(pl):	Narzêdzie zbieraj±ce wiadomo¶ci
 Name:		straw
-Version:	0.15
-Release:	1
+Version:	0.17
+Release:	0.1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://savannah.nongnu.org/download/%{name}/%{name}.pkg/%{version}/%{name}-%{version}.tar.bz2
@@ -67,11 +67,12 @@ install src/lib/*.py $RPM_BUILD_ROOT%{py_sitedir}/%{name}
 
 %py_comp $RPM_BUILD_ROOT%{py_sitedir}/%{name}
 %py_ocomp $RPM_BUILD_ROOT%{py_sitedir}/%{name}
+%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc README NEWS TODO
 %attr(755,root,root) %{_bindir}/*
