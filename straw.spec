@@ -56,7 +56,7 @@ skorzystaæ z centralnego serwisu takiego jak Syndic8.com.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_datadir}/applications,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} install \
 	PREFIX=$RPM_BUILD_ROOT%{_prefix} \
@@ -79,5 +79,5 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{py_sitedir}/%{name}
 %{py_sitedir}/%{name}/*.py[co]
 %{_datadir}/%{name}
-%{_datadir}/applications/*
+%{_desktopdir}/*
 %{_pixmapsdir}/*
