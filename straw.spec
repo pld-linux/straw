@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.python
 Summary:	News aggregator
 Summary(pl):	Narzêdzie zbieraj±ce wiadomo¶ci
 Name:		straw
