@@ -19,6 +19,7 @@ Patch1:		%{name}-sax_handler.patch
 URL:		http://www.nongnu.org/straw
 BuildRequires:	libgnomeui-devel >= 2.0.5
 Requires:	python-gnome-ui
+Requires:	pythom-gnome-gtkhtml
 Requires:	python-mx-DateTime
 Requires:	python-bsddb
 BuildArch:	noarch
