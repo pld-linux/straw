@@ -2,7 +2,7 @@
 Summary:	News aggregator
 Summary(pl):	Narzêdzie zbieraj±ce wiadomo¶ci
 Name:		straw
-Version:	0.11
+Version:	0.12
 Release:	1
 License:	GPL
 Group:		X11/Applications
@@ -13,6 +13,7 @@ URL:		http://www.nongnu.org/straw/
 BuildRequires:	libgnomeui-devel >= 2.0.5
 Requires:	python-gnome-ui
 Requires:	pythom-gnome-gtkhtml
+Requires:	python-gnome-vfs
 Requires:	python-mx-DateTime
 Requires:	python-bsddb
 BuildArch:	noarch
