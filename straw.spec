@@ -2,11 +2,12 @@ Summary:	News aggregator
 Summary(pl):	Narzêdzie zbieraj±ce wiadomo¶ci
 Name:		straw
 Version:	0.23
-Release:	2
+Release:	3
 License:	GPL
-Group:		X11/Applications
+Group:		X11/Applications/Networking
 Source0:	http://savannah.nongnu.org/download/%{name}/%{name}-%{version}.tar.bz2
 # Source0-md5:	8dbdb3bbb7a20554a069bca11712d8c3
+Patch0:		%{name}-desktop.patch
 URL:		http://www.nongnu.org/straw/
 BuildRequires:	libglade2-devel >= 2.0.1
 BuildRequires:	libgnomeui-devel >= 2.4.0
@@ -49,6 +50,7 @@ skorzystaæ z centralnego serwisu takiego jak Syndic8.com.
 
 %prep
 %setup -q
+%patch0 -p1
 
 mv po/{no,nb}.po
 
