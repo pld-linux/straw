@@ -7,6 +7,7 @@ Release:	0.1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://savannah.nongnu.org/download/%{name}/%{name}.pkg/%{version}/%{name}-%{version}.tar.bz2
+# Source0-md5:	5dc804b65d420042f158bfc13307f4d1
 Patch0:		%{name}-python.patch
 Patch1:		%{name}-sax_handler.patch
 URL:		http://www.nongnu.org/straw/
@@ -18,7 +19,6 @@ Requires:	python-mx-DateTime
 Requires:	python-bsddb
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 News aggregators read news, weblog or other feeds over the web and
