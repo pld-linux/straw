@@ -1,0 +1,10 @@
+diff -urN straw-0.23.orig/straw.desktop.in straw-0.23/straw.desktop.in
+--- straw-0.23.orig/straw.desktop.in	2004-11-22 19:24:33.113149808 +0100
++++ straw-0.23/straw.desktop.in	2004-11-22 19:25:17.690373040 +0100
+@@ -6,5 +6,5 @@
+ Exec=straw %U
+ Terminal=false
+ Type=Application
+-Categories=GNOME;Application;Internet;
++Categories=GTK;GNOME;Network;News;
+ Icon=straw.png
