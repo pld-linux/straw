@@ -2,22 +2,25 @@
 Summary:	News aggregator
 Summary(pl):	Narzêdzie zbieraj±ce wiadomo¶ci
 Name:		straw
-Version:	0.21.1
+Version:	0.22
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://savannah.nongnu.org/download/%{name}/%{name}.pkg/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	504c2614d0a09ae8d484ad1568881b32
-Patch0:		%{name}-python.patch
+Source0:	http://savannah.nongnu.org/download/%{name}/%{name}-%{version}.tar.bz2
+# Source0-md5:	8cdd2ad3c6d8f4e120eae003831152a0
 URL:		http://www.nongnu.org/straw/
+BuildRequires:	libglade2-devel >= 2.0.1
 BuildRequires:	libgnomeui-devel >= 2.4.0
 Requires(post):	GConf2 >= 2.4.0
+Requires:	python-adns
 Requires:	python-gnome-gconf
 Requires:	python-gnome-gtkhtml
 Requires:	python-gnome-ui
 Requires:	python-gnome-vfs
 Requires:	python-modules >= 2.3
 Requires:	python-mx-DateTime
+Requires:	python-pygtk-glade
+Requires:	python-pyorbit
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -48,26 +51,21 @@ skorzystaæ z centralnego serwisu takiego jak Syndic8.com.
 
 %prep
 %setup -q
-%patch0 -p1
 
-%build
-%{__make} \
-	PYTHON=python
+mv po/{no,nb}.po
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
-%{__make} install \
-	PREFIX=$RPM_BUILD_ROOT%{_prefix} \
-	PYTHON=python \
-	LIBDIR=$RPM_BUILD_ROOT%{py_sitedir}/%{name} \
-	SYSCONFDIR=$RPM_BUILD_ROOT%{_sysconfdir}
+%{__python} setup.py install \
+	--root=$RPM_BUILD_ROOT \
+	--prefix=%{_prefix} \
+	--sysconfdir=%{_sysconfdir} \
+	--install-purelib=%{py_sitedir} \
+	--optimize=2 \
+	--disable-modules-check \
+	--disable-schemas-install
 
-install src/lib/*.py $RPM_BUILD_ROOT%{py_sitedir}/%{name}
-
-%py_comp $RPM_BUILD_ROOT%{py_sitedir}/%{name}
-%py_ocomp $RPM_BUILD_ROOT%{py_sitedir}/%{name}
 rm -f $RPM_BUILD_ROOT%{py_sitedir}/%{name}/*.py
 
 %find_lang %{name}
