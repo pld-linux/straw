@@ -2,9 +2,6 @@
 #
 # todo:
 # - pl description
-# - make s/python2.2/python/g patch
-# - recompile straw python modules, so there will be *.pyo files installed
-#   and paths will be correct when exception is thrown
 #
 
 %include /usr/lib/rpm/macros.python
@@ -16,7 +13,8 @@ Version:	0.11
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	%{name}-%{version}.tar.bz2
+Source0:	http://savannah.nongnu.org/download/%{name}/%{name}.pkg/%{version}/%{name}-%{version}.tar.bz2
+Patch0:		%{name}-python.patch
 URL:		http://www.nongnu.org/straw
 BuildRequires:	libgnomeui-devel >= 2.0.5
 Requires:	python-gnome-ui
@@ -41,6 +39,7 @@ such as Syndic8.com.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__make} PYTHON=python
@@ -54,6 +53,11 @@ install -d $RPM_BUILD_ROOT{%{_datadir}/applications,%{_pixmapsdir}}
 	PYTHON=python \
 	LIBDIR=$RPM_BUILD_ROOT%{py_sitedir}/%{name}
 
+install src/lib/*.py $RPM_BUILD_ROOT%{py_sitedir}/%{name}
+
+%py_comp $RPM_BUILD_ROOT%{py_sitedir}/%{name}
+%py_ocomp $RPM_BUILD_ROOT%{py_sitedir}/%{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -61,7 +65,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README NEWS TODO
 %attr(755,root,root) %{_bindir}/*
+%dir %{py_sitedir}/%{name}
+%{py_sitedir}/%{name}/*.py[co]
 %{_datadir}/%{name}
-%{py_sitedir}/%{name}
 %{_datadir}/applications/*
 %{_pixmapsdir}/*
