@@ -1,0 +1,40 @@
+diff -Nur straw-0.11.orig/src/lib/OPML.py straw-0.11/src/lib/OPML.py
+--- straw-0.11.orig/src/lib/OPML.py	Sun Oct 13 23:12:13 2002
++++ straw-0.11/src/lib/OPML.py	Fri Oct 18 12:46:38 2002
+@@ -6,6 +6,7 @@
+ from xml.sax.handler import feature_namespaces, feature_namespace_prefixes
+ from xml.sax.saxutils import XMLGenerator
+ from xml.sax.xmlreader import AttributesImpl
++import xml.sax.handler 
+ from StringIO import StringIO
+ import xml.sax._exceptions
+ import sys
+@@ -95,7 +96,7 @@
+     def roots(self):
+         return self._roots
+ 
+-class OPMLHandler(saxutils.DefaultHandler):
++class OPMLHandler(xml.sax.handler.ContentHandler):
+     def __init__(self):
+         self._outlines = OutlineList()
+         self._opml = None
+diff -Nur straw-0.11.orig/src/lib/SummaryParser.py straw-0.11/src/lib/SummaryParser.py
+--- straw-0.11.orig/src/lib/SummaryParser.py	Sun Oct 13 23:16:44 2002
++++ straw-0.11/src/lib/SummaryParser.py	Fri Oct 18 12:33:09 2002
+@@ -9,6 +9,7 @@
+ from HTMLParser import HTMLParser
+ from StringIO import StringIO
+ import xml.sax._exceptions
++import xml.sax.handler
+ import rfc822
+ import time
+ import urlparse
+@@ -44,7 +45,7 @@
+     def get_images(self):
+         return self._images
+ 
+-class RSSHandler(saxutils.DefaultHandler):
++class RSSHandler(xml.sax.handler.ContentHandler):
+     def __init__(self, feed):
+         self._summary = straw.ParsedSummary()
+         self._feed = feed
