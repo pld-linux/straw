@@ -12,7 +12,6 @@ Patch0:		%{name}-python.patch
 URL:		http://www.nongnu.org/straw/
 BuildRequires:	libgnomeui-devel >= 2.4.0
 Requires(post):	GConf2 >= 2.4.0
-Requires:	python-adns
 Requires:	python-gnome-gconf
 Requires:	python-gnome-gtkhtml
 Requires:	python-gnome-ui
