@@ -2,12 +2,12 @@
 Summary:	News aggregator
 Summary(pl):	Narzêdzie zbieraj±ce wiadomo¶ci
 Name:		straw
-Version:	0.20
+Version:	0.21
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://savannah.nongnu.org/download/%{name}/%{name}.pkg/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	3a7b2098c1863193edc65d8f217e69b3
+# Source0-md5:	8fd2f1649668b3386158de92d2a96ebf
 Patch0:		%{name}-python.patch
 URL:		http://www.nongnu.org/straw/
 BuildRequires:	libgnomeui-devel >= 2.4.0
