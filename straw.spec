@@ -2,7 +2,7 @@
 Summary:	News aggregator
 Summary(pl):	Narzêdzie zbieraj±ce wiadomo¶ci
 Name:		straw
-Version:	0.13.2
+Version:	0.15
 Release:	1
 License:	GPL
 Group:		X11/Applications
