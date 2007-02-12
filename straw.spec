@@ -1,5 +1,5 @@
 Summary:	News aggregator
-Summary(pl):	Narzêdzie zbieraj±ce wiadomo¶ci
+Summary(pl.UTF-8):   NarzÄ™dzie zbierajÄ…ce wiadomoÅ›ci
 Name:		straw
 Version:	0.23
 Release:	5
@@ -36,18 +36,18 @@ To find feeds to subscribe to, look for a white on orange XML icon,
 XML icon, on web sites. You could also use a centralized syndication
 service, such as Syndic8.com.
 
-%description -l pl
-Narzêdzia zbieraj±ce czytaj± wiadomo¶ci, logi sieciowe lub inne ¼ród³a
-z sieci i zbieraj± je, dziêki czemu wszystkie wiadomo¶ci s± dostêpne
-do czytania w jednym miejscu, niezale¿nie od ¼ród³a. Narzêdzia te
-u¿ywaj± formatu danych o nazwie RSS (Really Simple Syndication lub RDF
-Site Summary - jak kto woli). Aktualnie s± dwie ró¿ne, niekompatybilne
-specyfikacje, o ró¿nych celach: RSS 0.9x/RSS 2.0 oraz RSS 1.0. Straw
-obs³uguje oba.
+%description -l pl.UTF-8
+NarzÄ™dzia zbierajÄ…ce czytajÄ… wiadomoÅ›ci, logi sieciowe lub inne ÅºrÃ³dÅ‚a
+z sieci i zbierajÄ… je, dziÄ™ki czemu wszystkie wiadomoÅ›ci sÄ… dostÄ™pne
+do czytania w jednym miejscu, niezaleÅ¼nie od ÅºrÃ³dÅ‚a. NarzÄ™dzia te
+uÅ¼ywajÄ… formatu danych o nazwie RSS (Really Simple Syndication lub RDF
+Site Summary - jak kto woli). Aktualnie sÄ… dwie rÃ³Å¼ne, niekompatybilne
+specyfikacje, o rÃ³Å¼nych celach: RSS 0.9x/RSS 2.0 oraz RSS 1.0. Straw
+obsÅ‚uguje oba.
 
-Aby znale¼æ ¼ród³a do których mo¿na siê zapisaæ, nale¿y szukaæ
-bia³o-pomarañczowych ikonek XML na stronach WWW. Mo¿na tak¿e
-skorzystaæ z centralnego serwisu takiego jak Syndic8.com.
+Aby znaleÅºÄ‡ ÅºrÃ³dÅ‚a do ktÃ³rych moÅ¼na siÄ™ zapisaÄ‡, naleÅ¼y szukaÄ‡
+biaÅ‚o-pomaraÅ„czowych ikonek XML na stronach WWW. MoÅ¼na takÅ¼e
+skorzystaÄ‡ z centralnego serwisu takiego jak Syndic8.com.
 
 %prep
 %setup -q
