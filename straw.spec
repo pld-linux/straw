@@ -1,5 +1,5 @@
 Summary:	News aggregator
-Summary(pl.UTF-8):   Narzędzie zbierające wiadomości
+Summary(pl.UTF-8):	Narzędzie zbierające wiadomości
 Name:		straw
 Version:	0.23
 Release:	5
