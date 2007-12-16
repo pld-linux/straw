@@ -1,10 +1,11 @@
-diff -urN straw-0.23.orig/straw.desktop.in straw-0.23/straw.desktop.in
---- straw-0.23.orig/straw.desktop.in	2004-11-22 19:24:33.113149808 +0100
-+++ straw-0.23/straw.desktop.in	2004-11-22 19:25:17.690373040 +0100
-@@ -6,5 +6,5 @@
+--- straw-0.27/straw.desktop.in.orig	2007-04-27 16:25:32.000000000 +0100
++++ straw-0.27/straw.desktop.in	2007-12-16 13:36:57.649813994 +0000
+@@ -8,7 +8,7 @@
  Exec=straw %U
  Terminal=false
  Type=Application
--Categories=GNOME;Application;Internet;
-+Categories=GTK;GNOME;Network;News;
+-Categories=GNOME;GTK;Network;
++Categories=GNOME;GTK;Network;News;
  Icon=straw.png
+ StartupNotify=true
+ X-GNOME-Bugzilla-Bugzilla=GNOME
