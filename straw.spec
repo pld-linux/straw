@@ -14,8 +14,9 @@ BuildRequires:	libgnomeui-devel >= 2.4.0
 BuildRequires:	rpmbuild(macros) >= 1.197
 Requires(post,preun):	GConf2 >= 2.4.0
 Requires:	python-adns
+Requires:	python-gnome-extras-egg
+Requires:	python-gnome-extras-gtkhtml
 Requires:	python-gnome-gconf
-Requires:	python-gnome-gtkhtml
 Requires:	python-gnome-ui
 Requires:	python-gnome-vfs
 %pyrequires_eq	python-modules
