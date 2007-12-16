@@ -3,14 +3,16 @@ Summary(pl.UTF-8):	Narzędzie zbierające wiadomości
 Name:		straw
 Version:	0.27
 Release:	1
-License:	GPL
+License:	GPL v2+
 Group:		X11/Applications/Networking
-Source0:	http://download.gnome.org/sources/straw/%{version}/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/straw/%{version}/%{name}-%{version}.tar.bz2
 # Source0-md5:	d21249c82b14570fe2c61e114d1d2ea7
 Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/projects/straw/
 BuildRequires:	libglade2-devel >= 2.0.1
 BuildRequires:	libgnomeui-devel >= 2.4.0
+BuildRequires:	python >= 1:2.4
+BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.197
 Requires(post,preun):	GConf2 >= 2.4.0
 Requires:	python-adns
@@ -20,7 +22,7 @@ Requires:	python-gnome-gconf
 Requires:	python-gnome-ui
 Requires:	python-gnome-vfs
 %pyrequires_eq	python-modules
-Requires:	python-pygtk-glade
+Requires:	python-pygtk-glade >= 2:2.8.0
 Requires:	python-pyorbit
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
