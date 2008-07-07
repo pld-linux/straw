@@ -2,7 +2,7 @@ Summary:	News aggregator
 Summary(pl.UTF-8):	Narzędzie zbierające wiadomości
 Name:		straw
 Version:	0.27
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		X11/Applications/Networking
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/straw/%{version}/%{name}-%{version}.tar.bz2
@@ -15,6 +15,7 @@ BuildRequires:	python >= 1:2.4
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.197
 Requires(post,preun):	GConf2 >= 2.4.0
+Requires:	NetworkManager
 Requires:	python-adns
 Requires:	python-gnome-extras-egg
 Requires:	python-gnome-extras-gtkhtml
