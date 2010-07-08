@@ -2,7 +2,7 @@ Summary:	News aggregator
 Summary(pl.UTF-8):	Narzędzie zbierające wiadomości
 Name:		straw
 Version:	0.27
-Release:	3
+Release:	4
 License:	GPL v2+
 Group:		X11/Applications/Networking
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/straw/%{version}/%{name}-%{version}.tar.bz2
